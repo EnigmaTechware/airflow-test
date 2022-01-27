@@ -11,9 +11,9 @@ YESTERDAY = datetime.datetime.now() - datetime.timedelta(days=1)
 
 with models.DAG(
         dag_id='composer_kubernetes_pod_simple',
-        schedule_interval=None,
+        schedule_interval=timedelta(hours=1),
         start_date=YESTERDAY,
-        tags=['yescnc'],
+        tags=['yescnc-new'],
     ) as dag:
     kubernetes_min_pod = KubernetesPodOperator(
         task_id='pod-workshop-simple',
