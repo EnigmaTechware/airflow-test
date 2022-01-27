@@ -18,6 +18,7 @@ with models.DAG(
     kubernetes_min_pod = KubernetesPodOperator(
         task_id='pod-workshop-simple',
         name='pod-workshop-simple',
+        label={'app':'my-test'},
         cmds=['echo', '"Hello world"'],
         namespace='default',
         resources={'request_memory': '128Mi',
