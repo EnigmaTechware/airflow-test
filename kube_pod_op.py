@@ -19,7 +19,7 @@ with models.DAG(
         task_id='pod-workshop-simple',
         name='pod-workshop-simple',
         cmds=['echo', '"Hello world"'],
-        namespace='default',
+        namespace='default2',
         resources={'request_memory': '128Mi',
                    'request_cpu': '500m',
                    'limit_memory': '500Mi',
