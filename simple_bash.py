@@ -66,10 +66,10 @@ with DAG(
     'simple_bash',
     default_args=default_args,
     description='A simple bash example',
-    schedule_interval=timedelta(days=1),
-    start_date=datetime(2021, 1, 1),
+    schedule_interval=timedelta(minutes=10),
+    start_date=datetime(2022, 1, 25),
     catchup=False,
-    tags=['yescnc'],
+    tags=['yescnc-1'],
 ) as dag:
     # [END instantiate_dag]
 
