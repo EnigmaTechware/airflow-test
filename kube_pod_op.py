@@ -11,7 +11,7 @@ YESTERDAY = datetime.datetime.now() - datetime.timedelta(days=1)
 
 with models.DAG(
         dag_id='composer_kubernetes_pod_simple',
-        schedule_interval=timedelta(hours=1),
+        schedule_interval=datetime.timedelta(hours=1),
         start_date=YESTERDAY,
         tags=['yescnc-new'],
     ) as dag:
